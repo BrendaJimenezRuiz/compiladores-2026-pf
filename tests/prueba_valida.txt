@@ -1,0 +1,84 @@
+// prueba_valida.txt — programa válido con todas las estructuras del lenguaje
+
+struct Punto {
+    int x;
+    int y;
+} p1, p2;
+
+int a, b, c;
+float x, y;
+bool flag;
+int[5] arreglo;
+float[3][4] matriz;
+
+def int suma(int n1, int n2) {
+    int resultado;
+    resultado = n1 + n2;
+    return resultado;
+}
+
+def bool esMayor(int a, int b) {
+    return a > b;
+}
+
+def void intercambiar(int a, int b) {
+    int tmp;
+    tmp = a;
+    a = b;
+    b = tmp;
+}
+
+def int main() {
+    int i, j;
+    int total;
+
+    a = 10;
+    b = 20;
+    c = suma(a, b);
+
+    // if simple
+    if (c > 25) {
+        flag = true;
+    }
+
+    // if-else
+    if (a < b) {
+        total = b - a;
+    } else {
+        total = a - b;
+    }
+
+    // while
+    i = 0;
+    while (i < 5) {
+        arreglo[i] = i * 2;
+        i = i + 1;
+    }
+
+    // for simple
+    for (i = 0; i < 5; i = i + 1) {
+        total = total + arreglo[i];
+    }
+
+    // for anidado con arreglo 2D
+    for (i = 0; i < 3; i = i + 1) {
+        for (j = 0; j < 4; j = j + 1) {
+            matriz[i][j] = i + j;
+        }
+    }
+
+    // acceso a struct
+    p1.x = 3;
+    p1.y = 4;
+
+    // break dentro de while
+    i = 0;
+    while (i < 10) {
+        if (i == 5) {
+            break;
+        }
+        i = i + 1;
+    }
+
+    return 0;
+}

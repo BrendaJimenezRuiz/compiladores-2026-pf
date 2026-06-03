@@ -1,0 +1,9 @@
+// error_sint_1.txt — falta punto y coma
+
+int a, b;
+
+def int main() {
+    a = 5
+    b = 10;
+    return 0;
+}
