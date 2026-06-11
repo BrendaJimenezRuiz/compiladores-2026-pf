@@ -1,0 +1,11 @@
+// error_sint_2.txt — paréntesis sin cerrar en if
+
+int x;
+
+def int main() {
+    x = 3;
+    if (x > 1 {
+        x = 0;
+    }
+    return 0;
+}
