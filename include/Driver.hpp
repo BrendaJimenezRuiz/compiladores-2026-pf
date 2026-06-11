@@ -10,6 +10,10 @@
 #include <string>
 #include <istream>
 #include <vector>
+#include <stack>
+
+#include "Table.h"
+#include "Quad.h"
 
 #include "Scanner.hpp"
 #include "parser.tab.hh"
@@ -28,6 +32,11 @@ public:
     bool isInSymbol(std::string) { return false; }
     void addSymbol(std::string) {}
     std::string newTemp() { return "t"; }
+
+    //hola
+    std::stack<C0::Table*> PilaTS;   // Pila de Tablas de Símbolos activas
+    std::stack<int> PilaOffset;      // Control del desplazamiento relativo (dir) 
+    std::vector<C0::Quad> codigoIntermedio;
 
 private:
     void parse_helper(std::istream &stream);
